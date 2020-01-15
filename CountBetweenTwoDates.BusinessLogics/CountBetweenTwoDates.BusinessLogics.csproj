@@ -5,7 +5,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Models\CountBetweenTwoDates\" />
+    <Compile Remove="Models\CountBetweenTwoDates\**" />
+    <EmbeddedResource Remove="Models\CountBetweenTwoDates\**" />
+    <None Remove="Models\CountBetweenTwoDates\**" />
   </ItemGroup>
 
 </Project>

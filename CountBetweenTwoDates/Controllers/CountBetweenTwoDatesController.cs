@@ -1,14 +1,11 @@
 ﻿using CountBetweenTwoDates.API.Configurations;
-using CountBetweenTwoDates.API.Models.CountBetweenTwoDates;
 using CountBetweenTwoDates.BusinessLogics.Interfaces;
 using CountBetweenTwoDates.BusinessLogics.Models;
 using CountBetweenTwoDates.BusinessLogics.Models.Data;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using System.Net;
 
 namespace CountBetweenTwoDates.API.Controllers
 {
@@ -22,13 +19,6 @@ namespace CountBetweenTwoDates.API.Controllers
         public CountBetweenTwoDatesController(ICountBetweenTwoDatesBC countBetweenTwoDatesBC) 
         {
             _countBetweenTwoDatesBC = countBetweenTwoDatesBC;
-        }
-
-        [HttpGet("user")]
-        [AllowAnonymous]
-        public IActionResult Get()
-        {
-            return Ok(new { name = "Test" });
         }
 
         [HttpPost("weekdays/{firstDate}/{secondDate}")]
